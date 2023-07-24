@@ -1,5 +1,3 @@
-<design:component label="">
+<design:component >
 
-	<design:attribute name="enableDebug" label="Debug Mode" description="Enable debug mode." />
-	
 </design:component>
