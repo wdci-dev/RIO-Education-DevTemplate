@@ -1,7 +1,10 @@
 /**
- * Email services are automated processes that use Apex classes
- * to process the contents, headers, and attachments of inbound
- * email.
+ * @author      WDCi ()
+ * @date        Aug 2023
+ * @group       
+ * @description 
+ * @changehistory
+ * 
  */
 global class <%= apiName %> implements Messaging.InboundEmailHandler {
 
