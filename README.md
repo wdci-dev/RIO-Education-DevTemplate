@@ -1,19 +1,18 @@
-# salesforcedx-templates
+# Salesforce DX Project: Next Steps
 
-[![Known Vulnerabilities](https://snyk.io/test/github/forcedotcom/salesforcedx-templates/badge.svg)](https://snyk.io/test/github/forcedotcom/salesforcedx-templates)
-[![License](https://img.shields.io/npm/l/salesforcedx-templates.svg)](https://github.com/forcedotcom/salesforcedx-templates/blob/master/package.json)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
 
-## Introduction
+## How Do You Plan to Deploy Your Changes?
 
-This repository provides:
+Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
 
-- [@salesforce/templates](https://www.npmjs.com/package/@salesforce/templates) to support the library and [Salesforce VS Code extensions](https://github.com/forcedotcom/salesforcedx-vscode/).
+## Configure Your Salesforce DX Project
 
-## Getting Started
+The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
 
-If you're interested in contributing, take a look at the [CONTRIBUTING](CONTRIBUTING.md) guide.
+## Read All About It
 
-If you're interested in building the library locally, take a look at the development [doc](contributing/developing.md).
-
-You can find more information about commands that the related [plugin](https://github.com/salesforcecli/plugin-templates) provides in the [commands](COMMANDS.md) doc.
+- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
+- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
+- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
+- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
