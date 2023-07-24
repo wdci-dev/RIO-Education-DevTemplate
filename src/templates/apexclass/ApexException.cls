@@ -6,6 +6,6 @@
  * @changehistory
  * 
  */
-public class <%= apiName %> extends Exception {
+public inherited sharing class <%= apiName %> extends Exception {
 
 }

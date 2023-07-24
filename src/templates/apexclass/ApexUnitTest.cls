@@ -7,7 +7,7 @@
  * 
  */
 @isTest
-private class <%= apiName %> {
+private with sharing class <%= apiName %> {
 
 	@TestSetup
     static void makeData(){
