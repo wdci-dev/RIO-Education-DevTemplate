@@ -1,18 +1,16 @@
-# Salesforce DX Project: Next Steps
+# RIO Education Eddie - Development Template
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+This provides the default Apex component template to help with the standardization and development practices. Supported templates are:
 
-## How Do You Plan to Deploy Your Changes?
+## Apex Class
+You can create the class using the template with command palette.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Apex Test Class
+You can create the class using the template by running the following command:
+sf force apex class create -n testMe -d force-app\main\default\classes -t ApexUnitTest
 
-## Configure Your Salesforce DX Project
+## Aura Component
+You can create the class using the template with command palette.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+## Lightning Web Component
+You can create the class using the template with command palette.
