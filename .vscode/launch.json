@@ -5,12 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Apex Replay Debugger",
-      "type": "apex-replay",
+      "name": "Run All Tests",
+      "type": "node",
       "request": "launch",
-      "logFile": "${command:AskForLogFileName}",
-      "stopOnEntry": true,
-      "trace": true
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["test"],
+      "preLaunchTask": "Compile"
     }
   ]
 }

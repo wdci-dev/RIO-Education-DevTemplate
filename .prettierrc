@@ -1,13 +1,5 @@
 {
-  "trailingComma": "none",
-  "overrides": [
-    {
-      "files": "**/lwc/**/*.html",
-      "options": { "parser": "lwc" }
-    },
-    {
-      "files": "*.{cmp,page,component}",
-      "options": { "parser": "html" }
-    }
-  ]
+  "printWidth": 80,
+  "tabWidth": 2,
+  "singleQuote": true
 }

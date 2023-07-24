@@ -1,18 +1,8 @@
-# This file is used for Git repositories to specify intentionally untracked files that Git should ignore. 
-# If you are not using git, you can delete this file. For more information see: https://git-scm.com/docs/gitignore
-# For useful gitignore templates see: https://github.com/github/gitignore
-
-# Salesforce cache
-.sf/
-.sfdx/
-.localdevserver/
-deploy-options.json
-
-# LWC VSCode autocomplete
-**/lwc/jsconfig.json
-
-# LWC Jest coverage reports
-coverage/
+# TypeScript generated files
+dist/
+out/
+lib/
+tmp/
 
 # Logs
 logs
@@ -20,26 +10,53 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+
+# Coverage directory used by tools like istanbul
+coverage
+coverage.lcov
 
 # Dependency directories
 node_modules/
 
-# Eslint cache
-.eslintcache
+# test results
+test-results.xml
+xunit.xml
+xunit-unitTests.xml
+xunit-integrationTests.xml
+xunit-vscodeIntegrationTests.xml
+junit-custom.xml
+junit-custom-unitTests.xml
+junit-custom-integrationTests.xml
+junit-custom-vscodeIntegrationTests.xml
+testsoutput/
+testpage/
+folder space/
+foo*
+analytics1/
+GitIgnoreTest/
+GitIgnoreTest2/
 
-# MacOS system files
-.DS_Store
+# nyc test coverage
+.nyc_output
 
-# Windows system files
-Thumbs.db
-ehthumbs.db
-[Dd]esktop.ini
-$RECYCLE.BIN/
+# Eclipse
+.project
 
-# Local environment variables
-.env
+# Webstorm
+.idea
 
-# Python Salesforce Functions
-**/__pycache__/
-**/.venv/
-**/venv/
+# no keys
+*.key
+
+# SalesforceDX
+.sfdx/
+
+# MacOS folder atttribute tracking
+**/.DS_Store
+
+# ignore oclif manifest file
+oclif.manifest.json
+
+# file generated for publishing
+*.tgz
