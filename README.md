@@ -2,6 +2,9 @@
 
 This provides the default Apex component template to help with the standardization and development practices. Supported templates are:
 
+## Apex Trigger
+You can create the class using the template with command palette.
+
 ## Apex Class
 You can create the class using the template with command palette.
 
