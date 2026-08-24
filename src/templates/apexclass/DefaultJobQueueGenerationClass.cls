@@ -11,7 +11,7 @@ public with sharing class JQH_<%= operationName %>_GENERATOR implements JQH_JobG
     
     List<Id> recordIds;
     Map<String, Object> params;
-    reduivy__Job_Queue_Config__mdt jobConfig;
+    rio_ed__Job_Queue_Config__mdt jobConfig;
 
     public JQH_<%= operationName %>_GENERATOR () {
 
@@ -40,7 +40,7 @@ public with sharing class JQH_<%= operationName %>_GENERATOR implements JQH_JobG
      * @param params Map of params in key value pair
      * @return void
      */
-    public void setJobConfig(reduivy__Job_Queue_Config__mdt jobConfig) {
+    public void setJobConfig(rio_ed__Job_Queue_Config__mdt jobConfig) {
         this.jobConfig = jobConfig;
     }
 
@@ -49,7 +49,7 @@ public with sharing class JQH_<%= operationName %>_GENERATOR implements JQH_JobG
      * @return String
      */
     public String getClassName() {
-        return 'reduivy.JQH_<%= operationName %>_GENERATOR';
+        return 'rio_ed.JQH_<%= operationName %>_GENERATOR';
     }
 
     /**
@@ -75,7 +75,7 @@ public with sharing class JQH_<%= operationName %>_GENERATOR implements JQH_JobG
 
         //return the generator result back to JQH_JobGenerator_QUEUE
         if(!childRecordsByParent.isEmpty()) {
-            for(reduivy__Parent__c parent : parentRecords) {
+            for(rio_ed__Parent__c parent : parentRecords) {
                 JQH_JobManager.GeneratorResult result = new JQH_JobManager.GeneratorResult();
                 
                 result.params.put(JQH_JobQueue_OBJ.PARAM_SOURCE_RECORD_ID, parent.Id);

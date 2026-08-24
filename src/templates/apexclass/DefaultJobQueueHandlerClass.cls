@@ -32,7 +32,7 @@ public with sharing class JQH_<%= operationName %>_HANDLER implements JQH_JobHan
      * @return String
      */
     public String getClassName() {
-        return 'reduivy.JQH_<%= operationName %>_HANDLER';
+        return 'rio_ed.JQH_<%= operationName %>_HANDLER';
     }
 
     /**
