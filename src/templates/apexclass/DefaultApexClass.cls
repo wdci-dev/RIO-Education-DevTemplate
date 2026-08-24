@@ -74,194 +74,31 @@ public with sharing class <%= apiName %> {
 }
 
 /*---------------------- Part 2 -----------------------*/
-public inherited sharing class <%= apiName %> extends REDU_TriggerExecutable {
+global inherited sharing class <%= apiName %> extends hed.TDTM_Runnable {
     
-	/**
-     * @description BeforeInsert
-     * @param operationType Trigger operation type enum
-     * @param newList Trigger new list
-     * @param newMap Trigger new map
-     * @param oldList Trigger old list
-     * @param oldMap Trigger old map
-     * @param sobjResult DescribeSObjectResult for the trigger object
-     */
-    public override void executeBeforeInsert(System.TriggerOperation operationType, List<SObject> newList, Map<Id, SObject> newMap, List<SObject> oldList, Map<Id, SObject> oldMap, Schema.DescribeSObjectResult sobjResult) {
-        
-        //TODO change the permission
-        if (REDU_Permission_UTIL.hasPermission(REDU_Permission_UTIL.UserPermission.REDUUSER)) {
+	public override DmlWrapper run(List<SObject> newList, List<SObject> oldList, hed.TDTM_Runnable.Action triggerAction, Schema.DescribeSObjectResult objResult) {
 
-            //TODO change the SObject
-            List<SObject> workingList = new List<SObject>();
-            for (SObject objNew : (List<SObject>) newList) {
+        hed.TDTM_Runnable.dmlWrapper dmlWrapper = new hed.TDTM_Runnable.DmlWrapper();
 
+        //TODO change the SObject
+        List<SObject> workingList = new List<SObject>();
+        if(triggerAction == hed.TDTM_Runnable.Action.BeforeInsert){
+            //TODO custom development logic here
+        }else if(triggerAction == hed.TDTM_Runnable.Action.BeforeUpdate){
+            //TODO custom development logic here
+        }else if (triggerAction == hed.TDTM_Runnable.Action.AfterInsert) {
+            //TODO custom development logic here
+        }else if(triggerAction == hed.TDTM_Runnable.Action.AfterUpdate){
+            //TODO custom development logic here
+        }
 
-                workingList.add(objNew);
-            }
-
+        if(!workingList.isEmpty()){
             doSomething(workingList);
         }
+
+        return dmlWrapper;
     }
 
-    /**
-     * @description BeforeUpdate
-     * @param operationType Trigger operation type enum
-     * @param newList Trigger new list
-     * @param newMap Trigger new map
-     * @param oldList Trigger old list
-     * @param oldMap Trigger old map
-     * @param sobjResult DescribeSObjectResult for the trigger object
-     */
-    public override void executeBeforeUpdate(System.TriggerOperation operationType, List<SObject> newList, Map<Id, SObject> newMap, List<SObject> oldList, Map<Id, SObject> oldMap, Schema.DescribeSObjectResult sobjResult) {
-
-        //TODO change the permission
-        if (REDU_Permission_UTIL.hasPermission(REDU_Permission_UTIL.UserPermission.REDUUSER)) {
-
-            //TODO change the SObject
-            List<SObject> workingList = new List<SObject>();
-            for (SObject objNew : (List<SObject>) newList) {
-                SObject objOld = (SObject) oldMap.get(objNew.Id);
-
-                if (objNew.reduivy__Field__c != objOld.reduivy__Field__c) {
-                    workingList.add(objNew);
-                }
-            }
-
-            doSomething(workingList);
-        }
-    }
-
-    /**
-     * @description BeforeDelete
-     * @param operationType Trigger operation type enum
-     * @param newList Trigger new list
-     * @param newMap Trigger new map
-     * @param oldList Trigger old list
-     * @param oldMap Trigger old map
-     * @param sobjResult DescribeSObjectResult for the trigger object
-     */
-    public override void executeBeforeDelete(System.TriggerOperation operationType, List<SObject> newList, Map<Id, SObject> newMap, List<SObject> oldList, Map<Id, SObject> oldMap, Schema.DescribeSObjectResult sobjResult) {
-
-        //TODO change the permission
-        if (REDU_Permission_UTIL.hasPermission(REDU_Permission_UTIL.UserPermission.REDUUSER)) {
-
-            //TODO change the SObject
-            List<SObject> workingList = new List<SObject>();
-            for (SObject objOld : (List<SObject>) oldList) {
-
-
-                workingList.add(objOld);
-            }
-
-            doSomething(workingList);
-        }
-    }
-
-    /**
-     * @description AfterInsert
-     * @param operationType Trigger operation type enum
-     * @param newList Trigger new list
-     * @param newMap Trigger new map
-     * @param oldList Trigger old list
-     * @param oldMap Trigger old map
-     * @param sobjResult DescribeSObjectResult for the trigger object
-     */
-    public override void executeAfterInsert(System.TriggerOperation operationType, List<SObject> newList, Map<Id, SObject> newMap, List<SObject> oldList, Map<Id, SObject> oldMap, Schema.DescribeSObjectResult sobjResult) {
-
-        //TODO change the permission
-        if (REDU_Permission_UTIL.hasPermission(REDU_Permission_UTIL.UserPermission.REDUUSER)) {
-
-            //TODO change the SObject
-            List<SObject> workingList = new List<SObject>();
-            for (SObject objNew : (List<SObject>) newList) {
-
-
-                workingList.add(objNew);
-            }
-
-            doSomething(workingList);
-        }
-    }
-
-    /**
-     * @description AfterUpdate
-     * @param operationType Trigger operation type enum
-     * @param newList Trigger new list
-     * @param newMap Trigger new map
-     * @param oldList Trigger old list
-     * @param oldMap Trigger old map
-     * @param sobjResult DescribeSObjectResult for the trigger object
-     */
-    public override void executeAfterUpdate(System.TriggerOperation operationType, List<SObject> newList, Map<Id, SObject> newMap, List<SObject> oldList, Map<Id, SObject> oldMap, Schema.DescribeSObjectResult sobjResult) {
-
-        //TODO change the permission
-        if (REDU_Permission_UTIL.hasPermission(REDU_Permission_UTIL.UserPermission.REDUUSER)) {
-
-            //TODO change the SObject
-            List<SObject> workingList = new List<SObject>();
-            for (SObject objNew : (List<SObject>) newList) {
-                SObject objOld = (SObject) oldMap.get(objNew.Id);
-
-                if (objNew.reduivy__Field__c != objOld.reduivy__Field__c) {
-                    workingList.add(objNew);
-                }
-            }
-
-            doSomething(workingList);
-        }
-    }
-
-    /**
-     * @description AfterDelete
-     * @param operationType Trigger operation type enum
-     * @param newList Trigger new list
-     * @param newMap Trigger new map
-     * @param oldList Trigger old list
-     * @param oldMap Trigger old map
-     * @param sobjResult DescribeSObjectResult for the trigger object
-     */
-    public override void executeAfterDelete(System.TriggerOperation operationType, List<SObject> newList, Map<Id, SObject> newMap, List<SObject> oldList, Map<Id, SObject> oldMap, Schema.DescribeSObjectResult sobjResult) {
-
-        //TODO change the permission
-        if (REDU_Permission_UTIL.hasPermission(REDU_Permission_UTIL.UserPermission.REDUUSER)) {
-
-            //TODO change the SObject
-            List<SObject> workingList = new List<SObject>();
-            for (SObject objOld : (List<SObject>) oldList) {
-
-
-                workingList.add(objOld);
-            }
-
-            doSomething(workingList);
-        }
-    }
-
-    /**
-     * @description AfterUndelete
-     * @param operationType Trigger operation type enum
-     * @param newList Trigger new list
-     * @param newMap Trigger new map
-     * @param oldList Trigger old list
-     * @param oldMap Trigger old map
-     * @param sobjResult DescribeSObjectResult for the trigger object
-     */
-    public override void executeAfterUndelete(System.TriggerOperation operationType, List<SObject> newList, Map<Id, SObject> newMap, List<SObject> oldList, Map<Id, SObject> oldMap, Schema.DescribeSObjectResult sobjResult) {
-
-        //TODO change the permission
-        if (REDU_Permission_UTIL.hasPermission(REDU_Permission_UTIL.UserPermission.REDUUSER)) {
-
-            //TODO change the SObject
-            List<SObject> workingList = new List<SObject>();
-            for (SObject objNew : (List<SObject>) newList) {
-
-
-                workingList.add(objNew);
-            }
-
-            doSomething(workingList);
-        }
-    }
-	
     /**
      * @description
      * @param
